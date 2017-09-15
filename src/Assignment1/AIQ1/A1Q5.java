@@ -34,7 +34,6 @@ public class A1Q5 {
         new Wall(tater, 3, 3, Direction.SOUTH);
         
         //create the team
-        
         Robot mango = new Robot(tater, 3, 3, Direction.EAST);
         mango.setColor(Color.ORANGE);
         mango.setLabel("M");
@@ -50,7 +49,7 @@ public class A1Q5 {
         new Thing(tater, 1, 2);
         new Thing(tater, 2, 2);
         
-        //have angela pick up 3 items
+        //have angela pick up 2 items
         angela.move();
         angela.pickThing();
         angela.turnLeft();
