@@ -58,30 +58,16 @@ public class A2Q4 {
         new Wall(tater, 3, 2, Direction.WEST);
         
         //patrol the building
-        //if there is not a wall
-        while(true){
-            if(mango.frontIsClear()==true){
-                //if there is, turn left until there is not
-                mango.move();
-                mango.turnLeft();
-                mango.move();
-                mango.turnLeft();
-                mango.turnLeft();
-                mango.turnLeft();
-                mango.move();
-                mango.move();
-                mango.turnLeft();
-                mango.turnLeft();
-                mango.turnLeft();
-                mango.move();
-                mango.move();
-                mango.turnLeft();
-                mango.turnLeft();
-                mango.turnLeft();
-                mango.move();
-            }else{
+        while(!mango.canPickThing()){
+            if(!mango.frontIsClear()){
             mango.turnLeft();
-                
+        }else{
+            if(mango.frontIsClear()){
+            mango.move();
+            mango.turnLeft();
+            mango.turnLeft();
+            mango.turnLeft();
+            }
             }
         }
     }
