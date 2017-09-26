@@ -1,0 +1,17 @@
+Nick MacDonald
+
+1.
+a) true
+b) false
+c) false
+d) false
+e) false
+f) true
+g) false
+
+2.
+They behave the same. #1 turns right if he can, and left if he can't.
+#2, however, first checks if he should turn left first. If there isn't
+an object, he turns left. And if there is, he'll turn right.
+
+The second is simply just the first described the other way around.
