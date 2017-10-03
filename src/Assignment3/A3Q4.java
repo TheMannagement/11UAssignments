@@ -67,24 +67,14 @@ public class A3Q4 {
         new Wall(tater, 5, 5, Direction.SOUTH);
 
         //patrol all of them once
-
-        for (int patrolAll = 0; patrolAll < 1; patrolAll = patrolAll + 1) {
+        for (int patrolAll = 0; patrolAll < 4; patrolAll = patrolAll + 1) {
             for (int patrolOne = 0; patrolOne < 4; patrolOne = patrolOne + 1) {
                 mango.move();
                 mango.move();
                 mango.move();
-                mango.turnLeft();
-                mango.move();
-                mango.move();
-                mango.move();
-                mango.turnLeft();
-                mango.move();
-                mango.move();
-                mango.move();
-                mango.turnLeft();
-                mango.move();
-                mango.move();
-                mango.move();
+                if (patrolOne <= 2) {
+                    mango.turnLeft();
+                }
             }
         }
     }
