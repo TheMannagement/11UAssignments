@@ -20,7 +20,6 @@ public class A6Q2 {
         // create scanner for input
         Scanner input = new Scanner(System.in);
 
-
         // ask for the number of students
         System.out.println("How many people to measure?");
         // storing the student number
@@ -33,24 +32,31 @@ public class A6Q2 {
         // use a loop to get all the info
         for (int i = 0; i < people; i++) {
             // asking for a height
-            System.out.println("Enter your height in centimetres:");
+            System.out.println("Please enter your height in centimetres:");
             // storing the height
             height[i] = input.nextInt();
         }
 
-        // got all the heights, average them
+        // got all the heights, now average them
         // start at 0
         double total = 0;
-        // go through each mark
+        // go through each height
         for (int i = 0; i < people; i++) {
             // add expense to total
             total = total + height[i];
         }
         // calculate the average
+        int above = 0;
         double average = (double) (total / people);
-        boolean aboveAverage = (people < average);
+        // go through each height and compare to the average
+        for (int i = 0; i < people; i++) {
+            // if there is someone above the average, add them
+            if(height[i] > average){
+                above = above +  1;
+            }
+        }
 
         // tell the user how many are above average
-        System.out.println("There are " + aboveAverage + " people above the average of " + average + ".");
+        System.out.println("There are " + above + " people above the average of " + average + ".");
     }
 }
