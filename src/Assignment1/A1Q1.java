@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Assignment1.newpackage;
+package Assignment1;
 
 import becker.robots.City;
 import becker.robots.Direction;
@@ -22,7 +22,7 @@ public class A1Q1 {
         // TODO code application logic here
         //create a new city
         City tater = new City();
-        
+
         //create 8 walls
         new Wall(tater, 3, 2, Direction.NORTH);
         new Wall(tater, 3, 3, Direction.NORTH);
@@ -32,10 +32,10 @@ public class A1Q1 {
         new Wall(tater, 4, 2, Direction.SOUTH);
         new Wall(tater, 3, 3, Direction.EAST);
         new Wall(tater, 4, 3, Direction.EAST);
-        
+
         //create robot
-        Robot mango = new Robot (tater, 3, 4, Direction.NORTH);
-        
+        Robot mango = new Robot(tater, 3, 4, Direction.NORTH);
+
         //make mango circle the block
         mango.move();
         mango.turnLeft();
@@ -53,7 +53,7 @@ public class A1Q1 {
         mango.turnLeft();
         mango.move();
         mango.move();
-        
-        
+
+
     }
 }

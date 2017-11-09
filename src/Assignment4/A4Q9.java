@@ -150,7 +150,7 @@ public class A4Q9 extends javax.swing.JFrame {
         //convert text to an integer
         int subtraction1 = Integer.parseInt(subOne);
         int subtraction2 = Integer.parseInt(subTwo);
-        //calcuate sum
+        //calcuate difference
         int difference = subtraction1 - subtraction2;
         //output to screen
         output.setText("" + difference);
@@ -163,7 +163,7 @@ public class A4Q9 extends javax.swing.JFrame {
         //convert text to an integer
         int multiply1 = Integer.parseInt(mulOne);
         int multiply2 = Integer.parseInt(mulTwo);
-        //calcuate sum
+        //calcuate product
         int product = multiply1 * multiply2;
         //output to screen
         output.setText("" + product);
@@ -176,7 +176,7 @@ public class A4Q9 extends javax.swing.JFrame {
         //convert text to an integer
         int divide1 = Integer.parseInt(divOne);
         int divide2 = Integer.parseInt(divTwo);
-        //calcuate sum
+        //calcuate quotient
         int quotient = divide1 / divide2;
         //output to screen
         output.setText("" + quotient);

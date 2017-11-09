@@ -21,13 +21,13 @@ public class A2Q2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+
         //create the city
         City tater = new City();
-                
+
         //create the robots
         Robot mango = new Robot(tater, 4, 0, Direction.EAST);
-        
+
         //create the track
         new Wall(tater, 4, 0, Direction.SOUTH);
         new Wall(tater, 4, 1, Direction.SOUTH);
@@ -38,30 +38,33 @@ public class A2Q2 {
         new Wall(tater, 4, 6, Direction.SOUTH);
         new Wall(tater, 4, 7, Direction.SOUTH);
         new Wall(tater, 4, 8, Direction.SOUTH);
-        new Wall(tater, 4, 6, Direction.EAST);
-        new Wall(tater, 4, 1, Direction.EAST);
-        new Wall(tater, 4, 4, Direction.EAST);
+        new Wall(tater, 4, 7, Direction.EAST);
+        new Wall(tater, 4, 2, Direction.EAST);
+        new Wall(tater, 4, 3, Direction.EAST);
         new Wall(tater, 4, 5, Direction.EAST);
-        
+
         //create the finish line
         new Thing(tater, 4, 8);
-        
+
         //look for walls in front
-        while(!mango.canPickThing()){
-            if(!mango.frontIsClear()){
-            mango.turnLeft();
-        }else{
-            if(mango.frontIsClear()){
-            mango.move();
-            mango.turnLeft();
-            mango.turnLeft();
-            mango.turnLeft();
-            }else{
-            if(mango.canPickThing()){
+        while (!mango.canPickThing()) {
+            if (!mango.frontIsClear()) {
+                //turn if there is a wall
                 mango.turnLeft();
+            } else {
+                if (mango.frontIsClear()) {
+                    //move forward but look for walls on right side
+                    mango.move();
+                    mango.turnLeft();
+                    mango.turnLeft();
+                    mango.turnLeft();
+                } else {
+                    //until mango can pick something up
+                    if (mango.canPickThing()) {
+                        mango.turnLeft();
+                    }
+                }
             }
         }
     }
-}
-}
 }

@@ -54,23 +54,23 @@ public class Quiz1 {
         //move the boulders
         for (int moveThings = 0; moveThings < 5; moveThings = moveThings + 1) {
             for (int move = 0; move < 8; move = move + 1) {
-            if (mango.frontIsClear()) {
-                mango.move();
-                if (mango.canPickThing()) {
-                    if (mango.getDirection() == Direction.EAST) {
-                        //grab it and turn around
-                        mango.pickThing();
+                if (mango.frontIsClear()) {
+                    mango.move();
+                    if (mango.canPickThing()) {
+                        if (mango.getDirection() == Direction.EAST) {
+                            //grab it and turn around
+                            mango.pickThing();
+                            mango.turnLeft();
+                            mango.turnLeft();
+                        }
+                    }
+                    if (!mango.frontIsClear()) {
+                        //place it and turn around
+                        mango.putThing();
                         mango.turnLeft();
                         mango.turnLeft();
                     }
                 }
-                if (!mango.frontIsClear()) {
-                    //place it and turn around
-                    mango.putThing();
-                    mango.turnLeft();
-                    mango.turnLeft();
-                }
-            }
             }
 
 

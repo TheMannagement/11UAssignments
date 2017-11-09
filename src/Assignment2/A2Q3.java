@@ -24,7 +24,7 @@ public class A2Q3 {
         City tater = new City();
 
         //create robots
-        Robot mango = new Robot(tater, 27, 16, Direction.WEST);
+        Robot mango = new Robot(tater, 270, 160, Direction.WEST);
 
         //return to origin (0, 0)
 
