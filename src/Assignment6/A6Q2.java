@@ -26,7 +26,7 @@ public class A6Q2 {
         int people = input.nextInt();
         //need any number of spots
 
-        // create an array to store name of expenses
+        // create an array to store people
         double[] height = new double[people];
 
         // use a loop to get all the info
@@ -51,7 +51,7 @@ public class A6Q2 {
         // go through each height and compare to the average
         for (int i = 0; i < people; i++) {
             // if there is someone above the average, add them
-            if(height[i] > average){
+            if(height[i] >= average){
                 above = above +  1;
             }
         }
