@@ -42,11 +42,16 @@ public class Face extends JComponent {
     // get slobber color
     Color slobber = new Color(92, 224, 250);
     
-    //create tongue and slobbers
-    int raspberry = 330;
-    int slobber1 = 400;
-    int slobber2 = 400;
-    int slobber3 = 400;
+    // create tongue and slobbers
+    int raspberry = 100;
+    int direction = -1;
+    // int slobber1 = 450;
+    // int slobber2 = 460;
+    // int slobber3 = 455;
+    
+    // create a wink
+    int wink = 75;
+    int eyelid = 1;
 
     // GAME VARIABLES END HERE   
 
@@ -88,8 +93,8 @@ public class Face extends JComponent {
 
         // GAME DRAWING GOES HERE
         // eyes
-        g.fillRect(200, 100, 75, 75);
-        g.fillRect(500, 100, 75, 75);
+        g.fillRect(200, 100, 75, wink);
+        g.fillRect(500, 100, 75, wink);
         // nose
         g.fillRect(510, 190, 75, 75);
         g.fillRect(430, 190, 140, 10);
@@ -101,15 +106,17 @@ public class Face extends JComponent {
         g.fillRect(250, 350, 50, 50);
         g.fillRect(500, 350, 50, 50);
         // smile
-        g.fillRect(225, 340, 50, 50);
-        g.fillRect(200, 320, 50, 50);
-        g.fillRect(525, 340, 50, 50);
+        g.fillRect(225, 350, 50, 50);
+        g.fillRect(200, 340, 50, 50);
+        g.fillRect(525, 350, 50, 50);
         // tongue
         g.setColor(tongue);
-        g.fillRect(raspberry, 375, 200, 100);
+        g.fillRect(330, 375, 200, raspberry);
         // slobber
-        g.setColor(slobber);
-        g.fillRect(480, slobber1, 30, 30);
+        //g.setColor(slobber);
+        //g.fillRect(502, slobber1, 30, 30);
+        //g.fillRect(476, slobber2, 30, 30);
+        //g.fillRect(452, slobber3, 30, 30);
         
         // GAME DRAWING ENDS HERE
     }
@@ -142,8 +149,33 @@ public class Face extends JComponent {
 
             // all your game rules and move is done in here
             // GAME LOGIC STARTS HERE 
+            //slobber1 = slobber1 + 2;
+            //if(slobber1 > 610){
+             //   slobber1 = 450;
+            //}
+           // slobber2 = slobber2 + 2;
+           // if(slobber2 > 610){
+           //     slobber2 = 450;
+           // }
+           // slobber3 = slobber3 + 2;
+           // if(slobber3 > 610){
+           //     slobber3 = 450;
+           // }
             
-            
+            raspberry = raspberry + direction;
+            if(raspberry < -50){
+                direction = 1;
+            }
+            if(raspberry > 100){
+                direction = -1;
+            }
+            //wink = wink + eyelid;
+            //if(wink > 75){
+            //    eyelid = -1;
+            //}
+            //if(wink < -10){
+            //    eyelid = 1;
+            //}
             // GAME LOGIC ENDS HERE 
             // update the drawing (calls paintComponent)
             repaint();
